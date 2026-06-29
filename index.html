@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Capobianco | Assessor de Investimentos — Mowe Investimentos</title>
+<meta name="description" content="Assessoria de investimentos e planejamento patrimonial com Matheus Capobianco, vinculado à Mowe Investimentos (escritório XP). Proteção patrimonial, renda fixa, renda variável, consórcio, crédito e câmbio.">
+<style>
+  /* ===== CONFIG: troque o número do WhatsApp abaixo (DDI+DDD+número, só dígitos) ===== */
+  :root{
+    --preto:#0a0a0a;
+    --preto-2:#141414;
+    --preto-3:#1c1c1c;
+    --laranja:#FF6B00;
+    --laranja-2:#ff8c33;
+    --laranja-soft:rgba(255,107,0,.12);
+    --branco:#ffffff;
+    --cinza:#b3b3b3;
+    --cinza-2:#8a8a8a;
+    --linha:#2a2a2a;
+    --radius:16px;
+    --maxw:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--preto);color:var(--branco);line-height:1.6;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:90px 0}
+  h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.02em}
+  .laranja{color:var(--laranja)}
+  .tag{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--laranja);background:var(--laranja-soft);padding:7px 16px;border-radius:999px;margin-bottom:22px;
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(10,10,10,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--linha);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo svg{height:26px;width:auto}
+  /* Logo em imagem: invertida para branco no fundo escuro */
+  .logo-img{height:38px;width:auto;display:block}
+  .logo-img-lg{height:72px;width:auto;display:block}
+  .logo .sep{width:1px;height:24px;background:var(--linha)}
+  .logo small{font-size:11px;color:var(--cinza-2);font-weight:600;letter-spacing:.04em}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:15px;color:var(--cinza);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--branco)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--laranja);color:#fff;font-weight:700;font-size:15px;
+    padding:13px 26px;border-radius:999px;border:none;cursor:pointer;transition:.2s;
+  }
+  .btn:hover{background:var(--laranja-2);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;border:1.5px solid var(--linha);color:var(--branco)}
+  .btn-ghost:hover{border-color:var(--laranja);background:transparent}
+  .nav-cta{padding:11px 22px}
+  .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+  .burger span{width:24px;height:2px;background:#fff;border-radius:2px}
+
+  /* ===== Hero ===== */
+  .hero{
+    padding:160px 0 100px;position:relative;
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(255,107,0,.18), transparent 60%),
+      radial-gradient(700px 500px at 10% 110%, rgba(255,107,0,.08), transparent 55%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+  .hero h1{font-size:54px;margin-bottom:22px}
+  .hero p.lead{font-size:19px;color:var(--cinza);max-width:560px;margin-bottom:34px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:28px;margin-top:42px;flex-wrap:wrap}
+  .hero-trust div{display:flex;flex-direction:column}
+  .hero-trust b{font-size:26px;color:#fff}
+  .hero-trust span{font-size:13px;color:var(--cinza-2)}
+  .hero-card{
+    background:linear-gradient(160deg,var(--preto-2),var(--preto-3));
+    border:1px solid var(--linha);border-radius:24px;padding:34px;position:relative;overflow:hidden;
+  }
+  .hero-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--laranja)}
+  .hero-card h3{font-size:20px;margin-bottom:6px}
+  .hero-card .muted{color:var(--cinza-2);font-size:14px;margin-bottom:24px}
+  .pillars-mini{display:flex;flex-direction:column;gap:14px}
+  .pillar-mini{display:flex;gap:14px;align-items:flex-start}
+  .pillar-mini .ico{flex:0 0 40px;height:40px;border-radius:10px;background:var(--laranja-soft);display:flex;align-items:center;justify-content:center}
+  .pillar-mini .ico svg{width:20px;height:20px;stroke:var(--laranja)}
+  .pillar-mini b{font-size:15px;display:block}
+  .pillar-mini small{color:var(--cinza-2);font-size:13px}
+
+  /* ===== Sobre / Mowe ===== */
+  .about{background:var(--preto-2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about h2{font-size:38px;margin-bottom:20px}
+  .about p{color:var(--cinza);margin-bottom:16px;font-size:16px}
+  .about-logo-box{
+    background:var(--preto);border:1px solid var(--linha);border-radius:20px;
+    padding:48px;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;
+  }
+  .about-logo-box svg{height:46px}
+  .about-logo-box .line{width:60px;height:3px;background:var(--laranja);border-radius:2px}
+  .about-logo-box p{font-size:14px;color:var(--cinza-2);margin:0}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .badge{font-size:13px;border:1px solid var(--linha);padding:8px 14px;border-radius:999px;color:var(--cinza)}
+
+  /* ===== Serviços ===== */
+  .section-head{text-align:center;max-width:680px;margin:0 auto 56px}
+  .section-head h2{font-size:40px;margin-bottom:16px}
+  .section-head p{color:var(--cinza);font-size:17px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--preto-2);border:1px solid var(--linha);border-radius:var(--radius);
+    padding:30px;transition:.25s;position:relative;
+  }
+  .card:hover{border-color:var(--laranja);transform:translateY(-4px)}
+  .card .ico{
+    width:52px;height:52px;border-radius:13px;background:var(--laranja-soft);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .card .ico svg{width:26px;height:26px;stroke:var(--laranja);fill:none;stroke-width:1.8}
+  .card h3{font-size:20px;margin-bottom:10px}
+  .card p{color:var(--cinza);font-size:15px}
+  .card ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+  .card li{font-size:14px;color:var(--cinza);padding-left:22px;position:relative}
+  .card li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--laranja)}
+
+  /* ===== Proteção patrimonial destaque ===== */
+  .protect{
+    background:linear-gradient(160deg,var(--preto-3),var(--preto));
+    border:1px solid var(--linha);border-radius:24px;padding:56px;
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  }
+  .protect h2{font-size:34px;margin-bottom:16px}
+  .protect p{color:var(--cinza);margin-bottom:14px}
+  .protect-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .protect-list .item{background:var(--preto-2);border:1px solid var(--linha);border-radius:14px;padding:20px}
+  .protect-list .item b{display:block;margin-bottom:6px;font-size:15px}
+  .protect-list .item span{font-size:13px;color:var(--cinza-2)}
+
+  /* ===== CTA Form ===== */
+  .cta{background:var(--preto-2);border-top:1px solid var(--linha)}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .cta h2{font-size:38px;margin-bottom:18px}
+  .cta p{color:var(--cinza);font-size:17px;margin-bottom:24px}
+  .cta-points{display:flex;flex-direction:column;gap:14px}
+  .cta-points div{display:flex;gap:12px;align-items:center;font-size:15px;color:var(--cinza)}
+  .cta-points svg{width:22px;height:22px;stroke:var(--laranja);flex:0 0 22px}
+  .form-box{background:var(--preto);border:1px solid var(--linha);border-radius:20px;padding:36px}
+  .form-box h3{font-size:22px;margin-bottom:6px}
+  .form-box .sub{color:var(--cinza-2);font-size:14px;margin-bottom:24px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--cinza)}
+  .field input{
+    width:100%;background:var(--preto-3);border:1px solid var(--linha);border-radius:11px;
+    padding:14px 16px;color:#fff;font-size:15px;transition:.2s;
+  }
+  .field input:focus{outline:none;border-color:var(--laranja);background:#222}
+  .field input::placeholder{color:#666}
+  .form-box .btn{width:100%;padding:16px;font-size:16px;margin-top:6px}
+  .form-consent{font-size:12px;color:var(--cinza-2);margin-top:16px;line-height:1.5}
+  .form-consent a{color:var(--cinza);text-decoration:underline}
+  .form-msg{display:none;font-size:14px;margin-top:14px;padding:12px;border-radius:10px}
+  .form-msg.ok{display:block;background:var(--laranja-soft);color:var(--laranja-2);border:1px solid var(--laranja)}
+
+  /* ===== Footer / Compliance ===== */
+  footer{background:var(--preto);border-top:1px solid var(--linha);padding:54px 0 36px}
+  .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px}
+  .foot-top svg{height:24px;margin-bottom:16px}
+  .foot-col h4{font-size:14px;margin-bottom:14px;color:#fff}
+  .foot-col a,.foot-col p{display:block;font-size:14px;color:var(--cinza);margin-bottom:9px}
+  .disclaimer{border-top:1px solid var(--linha);padding-top:24px;font-size:12px;color:var(--cinza-2);line-height:1.7}
+  .disclaimer p{margin-bottom:12px}
+  .copy{margin-top:20px;font-size:12px;color:#555}
+
+  /* ===== Responsivo ===== */
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .burger{display:flex}
+    .hero-grid,.about-grid,.cta-grid,.protect{grid-template-columns:1fr;gap:40px}
+    .protect{padding:34px}
+    .cards{grid-template-columns:1fr}
+    .hero h1{font-size:38px}
+    .section-head h2,.cta h2,.about h2{font-size:30px}
+    section{padding:64px 0}
+    .protect-list{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <!-- Logo MOWE (arquivo real, invertido p/ branco no fundo escuro) -->
+      <img class="logo-img" src="logo-mowe-branca.png" alt="MOWE Investimentos">
+      <span class="sep"></span>
+      <small>Investimentos<br>Escritório XP</small>
+    </div>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#protecao">Proteção</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="btn nav-cta">Falar com assessor</a>
+    </nav>
+    <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">Assessoria de investimentos · XP</span>
+      <h1>Seu patrimônio <span class="laranja">protegido</span> e bem investido, com estratégia.</h1>
+      <p class="lead">Sou <b>Matheus Capobianco</b>, assessor de investimentos vinculado à <b>Mowe Investimentos</b>, escritório credenciado da XP. Ajudo você a estruturar, proteger e fazer seu patrimônio crescer — com clareza e sem promessas mágicas.</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn">Quero uma análise gratuita</a>
+        <a href="#solucoes" class="btn btn-ghost">Conhecer soluções</a>
+      </div>
+      <div class="hero-trust">
+        <div><b>XP</b><span>Plataforma vinculada</span></div>
+        <div><b>5+</b><span>Verticais de soluções</span></div>
+        <div><b>100%</b><span>Atendimento personalizado</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Por onde começamos</h3>
+      <p class="muted">Um diagnóstico simples do seu momento financeiro.</p>
+      <div class="pillars-mini">
+        <div class="pillar-mini">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/></svg></div>
+          <div><b>Proteção patrimonial</b><small>Blindagem e organização do que você já construiu.</small></div>
+        </div>
+        <div class="pillar-mini">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 17l6-6 4 4 7-8"/></svg></div>
+          <div><b>Crescimento com estratégia</b><small>Carteira alinhada ao seu perfil e objetivos.</small></div>
+        </div>
+        <div class="pillar-mini">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1v22M5 8h9a3 3 0 010 6H8a3 3 0 000 6h9"/></svg></div>
+          <div><b>Planejamento completo</b><small>Renda fixa, variável, crédito, câmbio e mais.</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE / MOWE ============ -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div>
+      <span class="tag">O escritório</span>
+      <h2>Mowe Investimentos</h2>
+      <p>A <b>Mowe Investimentos</b> é um escritório de assessoria de investimentos credenciado à <b>XP Investimentos</b>, uma das maiores plataformas de investimentos do Brasil.</p>
+      <p>Trabalhamos com uma estrutura completa de soluções financeiras: investimentos e renda variável, previdência, crédito, câmbio, consórcio, seguros, planejamento patrimonial e serviços internacionais. Tudo com a curadoria de quem acompanha seu objetivo de perto.</p>
+      <p>Como assessor, meu papel é <b>entender seu momento e conectar você às melhores soluções da plataforma</b> — sempre de forma transparente e adequada ao seu perfil.</p>
+      <div class="badges">
+        <span class="badge">Vinculado à XP</span>
+        <span class="badge">Atuação conforme CVM</span>
+        <span class="badge">Atendimento personalizado</span>
+      </div>
+    </div>
+    <div class="about-logo-box">
+      <img class="logo-img-lg" src="logo-mowe-branca.png" alt="MOWE Investimentos">
+      <div class="line"></div>
+      <p>Escritório de Assessoria de Investimentos<br>credenciado à XP Investimentos</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUÇÕES ============ -->
+<section id="solucoes">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Soluções</span>
+      <h2>Tudo o que seu patrimônio precisa, em um só lugar</h2>
+      <p>Cada solução é apresentada de acordo com o seu perfil de investidor e seus objetivos. Conheça as principais frentes de trabalho.</p>
+    </div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0110 0v3"/></svg></div>
+        <h3>Renda Fixa</h3>
+        <p>Investimentos com regras de remuneração definidas no momento da aplicação. Tendem a ter previsibilidade maior e são a base da maioria das carteiras.</p>
+        <ul>
+          <li>Tesouro Direto, CDB, LCI/LCA</li>
+          <li>Debêntures e CRI/CRA</li>
+          <li>Reserva de emergência e objetivos de curto prazo</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Renda Variável</h3>
+        <p>Ações, fundos e ativos cujo retorno oscila com o mercado. Apoio com a Mesa de Renda Variável para decisões alinhadas ao seu perfil e horizonte.</p>
+        <ul>
+          <li>Ações e ETFs</li>
+          <li>Fundos imobiliários (FIIs)</li>
+          <li>Fundos de investimento e estratégias diversificadas</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5a3 3 0 013-1.5c1.5 0 3 .8 3 2s-1.5 2-3 2-3 .8-3 2 1.5 2 3 2a3 3 0 003-1.5"/></svg></div>
+        <h3>Consórcio &amp; Crédito</h3>
+        <p>Soluções de planejamento de compra e de crédito para quem busca adquirir bens ou organizar a vida financeira com inteligência.</p>
+        <ul>
+          <li>Consórcio (imóveis, veículos, serviços)</li>
+          <li>Crédito com garantia e linhas estruturadas</li>
+          <li>Crédito imobiliário (Home Finance)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0118 0 9 9 0 01-18 0z"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <h3>Câmbio</h3>
+        <p>Operações de moeda estrangeira para remessas, viagens e proteção. Mesa de câmbio dedicada para envio e recebimento internacional.</p>
+        <ul>
+          <li>Remessas internacionais</li>
+          <li>Câmbio para viagens e estudos</li>
+          <li>Proteção cambial do patrimônio</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Proteção &amp; Seguros</h3>
+        <p>Estruturas para proteger sua renda, sua família e seu patrimônio contra imprevistos — parte essencial de qualquer planejamento sólido.</p>
+        <ul>
+          <li>Seguro de vida e proteção familiar</li>
+          <li>Previdência privada</li>
+          <li>Planejamento sucessório</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 010 20"/></svg></div>
+        <h3>Internacional &amp; Offshore</h3>
+        <p>Diversificação global e estruturação internacional do patrimônio, com acesso a contas e investimentos no exterior.</p>
+        <ul>
+          <li>Investimentos no exterior</li>
+          <li>Estruturação offshore</li>
+          <li>Planejamento tributário internacional</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROTEÇÃO PATRIMONIAL ============ -->
+<section id="protecao">
+  <div class="container">
+    <div class="protect">
+      <div>
+        <span class="tag">Proteção patrimonial</span>
+        <h2>Construir é importante. <span class="laranja">Proteger</span> é essencial.</h2>
+        <p>De nada adianta acumular patrimônio sem uma estratégia para preservá-lo. A proteção patrimonial organiza, blinda e prepara o que você construiu para qualquer cenário — incluindo a sucessão para quem você ama.</p>
+        <p>Trabalho com uma visão integrada: investimentos, seguros, previdência e estruturação, sempre adequados ao seu perfil e momento de vida.</p>
+        <a href="#contato" class="btn" style="margin-top:10px">Quero proteger meu patrimônio</a>
+      </div>
+      <div class="protect-list">
+        <div class="item"><b>Diversificação</b><span>Reduzir riscos distribuindo o patrimônio entre diferentes ativos e classes.</span></div>
+        <div class="item"><b>Reserva de segurança</b><span>Liquidez para imprevistos, sem precisar resgatar investimentos na hora errada.</span></div>
+        <div class="item"><b>Seguros &amp; previdência</b><span>Proteção da renda e da família contra eventos inesperados.</span></div>
+        <div class="item"><b>Sucessão</b><span>Organização para transmitir o patrimônio com menos custo e conflito.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FORMULÁRIO ============ -->
+<section class="cta" id="contato">
+  <div class="container cta-grid">
+    <div>
+      <span class="tag">Fale comigo</span>
+      <h2>Vamos conversar sobre o seu <span class="laranja">momento financeiro</span>?</h2>
+      <p>Preencha seus dados e eu entro em contato para entender seus objetivos e apresentar, sem compromisso, as soluções mais adequadas ao seu perfil.</p>
+      <div class="cta-points">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Diagnóstico gratuito e sem compromisso</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Atendimento humano e personalizado</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Recomendações adequadas ao seu perfil de investidor</div>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h3>Solicite seu contato</h3>
+      <p class="sub">Resposta em horário comercial. Seus dados são tratados com confidencialidade.</p>
+      <form id="leadForm" onsubmit="return enviarLead(event)">
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="tel">Telefone pessoal (WhatsApp)</label>
+          <input type="tel" id="tel" name="tel" placeholder="(00) 00000-0000" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="email">Melhor e-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+        </div>
+        <button type="submit" class="btn" id="btnEnviar">Falar com o assessor</button>
+        <div class="form-msg" id="formMsg"></div>
+        <p class="form-consent">Ao enviar, você concorda em ser contatado por Matheus Capobianco / Mowe Investimentos e com o tratamento dos seus dados conforme a <a href="#protecao">LGPD</a>, exclusivamente para fins de atendimento. Você pode solicitar a exclusão a qualquer momento.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER + COMPLIANCE ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div style="max-width:300px">
+        <img class="logo-img" src="logo-mowe-branca.png" alt="MOWE Investimentos" style="height:30px">
+        <p style="color:var(--cinza);font-size:14px;margin-top:8px">Matheus Capobianco — Assessor de Investimentos vinculado à Mowe Investimentos.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Soluções</h4>
+        <a href="#solucoes">Renda Fixa</a>
+        <a href="#solucoes">Renda Variável</a>
+        <a href="#solucoes">Consórcio &amp; Crédito</a>
+        <a href="#solucoes">Câmbio</a>
+        <a href="#protecao">Proteção patrimonial</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://www.instagram.com/matheuscapobiancoaai/" target="_blank" rel="noopener">Instagram @matheuscapobiancoaai</a>
+        <a href="#contato">Solicitar contato</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p><b>Avisos importantes (leia com atenção):</b></p>
+      <p>Matheus Capobianco é Assessor de Investimentos autônomo, atuando de forma vinculada à Mowe Investimentos, escritório credenciado à XP Investimentos CCTVM S.A. O assessor de investimentos atua como preposto da instituição integrante do sistema de distribuição de valores mobiliários e <b>não realiza a gestão de recursos de terceiros</b>. A atividade de assessoria de investimentos é regulamentada pela Resolução CVM nº 178/2023.</p>
+      <p>Este material tem caráter exclusivamente informativo e <b>não constitui oferta, recomendação ou solicitação de compra ou venda de qualquer ativo ou produto financeiro</b>. As informações aqui apresentadas não consideram objetivos de investimento, situação financeira ou necessidades específicas de qualquer pessoa.</p>
+      <p><b>Rentabilidade passada não representa garantia de resultados futuros.</b> Investimentos envolvem riscos e podem resultar em perdas, inclusive do capital aplicado. Antes de investir, leia atentamente as informações, lâminas, regulamentos e prospectos de cada produto. Os investimentos não contam com garantia do assessor, da Mowe ou da XP, ressalvadas as hipóteses de cobertura do Fundo Garantidor de Créditos (FGC), quando aplicável.</p>
+      <p>Para reclamações, utilize os canais oficiais da XP Investimentos (Ouvidoria) e da CVM. Em caso de divergências entre este material e os documentos oficiais dos produtos, prevalecem os documentos oficiais.</p>
+      <div class="copy">© <span id="ano"></span> Mowe Investimentos · Matheus Capobianco — Assessor de Investimentos. Todos os direitos reservados.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ========================================================================
+     CONFIGURAÇÃO — cole abaixo a URL do seu Google Apps Script (termina em /exec).
+     Passo a passo de como gerar essa URL está no arquivo INSTRUCOES-GOOGLE-SHEETS.
+     ======================================================================== */
+  const SHEETS_URL = "https://script.google.com/macros/s/AKfycbzr7n7JtZNi2AViHEcwv4nEYCUeTLxhXMrd2AjAIcl1P2-9N3FXtv5bZHLi4wm1pjYd/exec";
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  async function enviarLead(e){
+    e.preventDefault();
+    const nome  = document.getElementById('nome').value.trim();
+    const tel   = document.getElementById('tel').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const btn   = document.getElementById('btnEnviar');
+    const msg   = document.getElementById('formMsg');
+
+    if(SHEETS_URL.indexOf("COLE_AQUI") !== -1){
+      alert("Configuração pendente: cole a URL do Google Apps Script na variável SHEETS_URL do código.");
+      return false;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Enviando…";
+
+    const dados = new FormData();
+    dados.append("nome", nome);
+    dados.append("telefone", tel);
+    dados.append("email", email);
+    dados.append("origem", "Landing Page");
+
+    try{
+      await fetch(SHEETS_URL, { method:"POST", body:dados, mode:"no-cors" });
+      msg.textContent = "Recebido! Em breve entrarei em contato. Obrigado pelo interesse.";
+      msg.classList.add('ok');
+      document.getElementById('leadForm').reset();
+      btn.textContent = "Enviado com sucesso";
+    }catch(err){
+      msg.textContent = "Não foi possível enviar agora. Tente novamente em instantes.";
+      msg.classList.add('ok');
+      btn.disabled = false;
+      btn.textContent = "Falar com o assessor";
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
